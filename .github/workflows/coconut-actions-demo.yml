@@ -12,7 +12,7 @@ jobs:
 
   secound-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: First-Job
+    needs: First-Job
     steps:
       - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -22,7 +22,7 @@ jobs:
 
   thrid-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: secound-Job
+    needs: secound-Job
     steps:
       - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -32,7 +32,7 @@ jobs:
 
   fouth-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: thrid-Job
+    needs: thrid-Job
     steps:
       - run: echo "🎉 หยอดเหรียญ" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -42,7 +42,7 @@ jobs:
 
   five-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: fouth-Job
+    needs: fouth-Job
     steps:
       - run: echo "🎉 ตากผ้า" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
