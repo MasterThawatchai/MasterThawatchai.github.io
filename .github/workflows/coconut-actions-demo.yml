@@ -1,7 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  First Job: # ! ชื่อ job
+  First-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
     steps:
       - run: echo "🎉 อาผ้าลงเครื่องซักผ้า" # ? ! ชื่อ job
@@ -10,9 +10,9 @@ jobs:
           access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
           message: เอาผ้าลงเครื่องซักผ้า
 
-  secound Job: # ! ชื่อ job
+  secound-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: First Job
+    need: First
     steps:
       - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -20,9 +20,9 @@ jobs:
           access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
           message: ใส่ผงซักฟอก
 
-  thrid Job: # ! ชื่อ job
+  thrid-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: secound Job
+    need: secound-Job
     steps:
       - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -30,9 +30,9 @@ jobs:
           access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
           message: ใส่ผงซักฟอก
 
-  fouth Job: # ! ชื่อ job
+  fouth-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: thrid Job
+    need: thrid-Job
     steps:
       - run: echo "🎉 หยอดเหรียญ" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
@@ -40,9 +40,9 @@ jobs:
           access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
           message: หยอดเหรียญ รอดำเนินการ จนซักเสร็จ
 
-  five Job: # ! ชื่อ job
+  five-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: fouth Job
+    need: fouth-Job
     steps:
       - run: echo "🎉 ตากผ้า" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
