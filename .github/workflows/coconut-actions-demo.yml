@@ -12,7 +12,7 @@ jobs:
 
   secound-Job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    need: First
+    need: First-Job
     steps:
       - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
