@@ -1,0 +1,7 @@
+@url = https://notify-api.line.me/api/notify
+
+POST {{url}}
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
+
+message=hello coconut
