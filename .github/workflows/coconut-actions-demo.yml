@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
     steps:
       - run: echo "🎉 hello coconut test"
+      - run: $  curl -v -X POST -H 'Authorization: Bearer V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS' -F 'message=coconut work complte' https://notify-api.line.me/api/notify
 
