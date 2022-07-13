@@ -1,52 +1,11 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
-  First-Job: # ! ชื่อ job
+  update-job: # ! ชื่อ job
     runs-on: ubuntu-latest # ! os ที่ใช้งาน
     steps:
-      - run: echo "🎉 อาผ้าลงเครื่องซักผ้า" # ? ! ชื่อ job
+      - run: echo "🎉 coconut update งานเรียบร้อย" # ? ! ชื่อ job
       - uses: snow-actions/line-notify@v1.0.0 # ?lib line
         with: # ? ตัวแปรที่ต้องส่ง
           access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
-          message: เอาผ้าลงเครื่องซักผ้า
-
-  secound-Job: # ! ชื่อ job
-    runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    needs: First-Job
-    steps:
-      - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
-      - uses: snow-actions/line-notify@v1.0.0 # ?lib line
-        with: # ? ตัวแปรที่ต้องส่ง
-          access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
-          message: ใส่ผงซักฟอก
-
-  thrid-Job: # ! ชื่อ job
-    runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    needs: secound-Job
-    steps:
-      - run: echo "🎉 ใส่ผงซักฟอก" # ? ! ชื่อ job
-      - uses: snow-actions/line-notify@v1.0.0 # ?lib line
-        with: # ? ตัวแปรที่ต้องส่ง
-          access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
-          message: ใส่ผงซักฟอก
-
-  fouth-Job: # ! ชื่อ job
-    runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    needs: thrid-Job
-    steps:
-      - run: echo "🎉 หยอดเหรียญ" # ? ! ชื่อ job
-      - uses: snow-actions/line-notify@v1.0.0 # ?lib line
-        with: # ? ตัวแปรที่ต้องส่ง
-          access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
-          message: หยอดเหรียญ รอดำเนินการ จนซักเสร็จ
-
-  five-Job: # ! ชื่อ job
-    runs-on: ubuntu-latest # ! os ที่ใช้งาน
-    needs: fouth-Job
-    steps:
-      - run: echo "🎉 ตากผ้า" # ? ! ชื่อ job
-      - uses: snow-actions/line-notify@v1.0.0 # ?lib line
-        with: # ? ตัวแปรที่ต้องส่ง
-          access_token: V5VyTox6GSeoa3MqCvsDJv9MNv4efYR5GP4ovYbM3FS
-          message: นำผ้าตากแดด
-
+          message: 🍷 coconut update งานเรียบร้อย 🍻
