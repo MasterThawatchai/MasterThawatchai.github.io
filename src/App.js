@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./Componant/Admin";
 import Select from "./Componant/Axios_api";
 import Axios_test from './Componant/Axios_test';
+import Post_api from './Componant/example_method_post';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Admin/>}/>
             <Route path="/selectApi" element={<Select/>}/>
             <Route path="/apitest" element={<Axios_test/>}/>
+            <Route path="/post_api" element={<Post_api/>}/>
           </Routes>
       </Router>
     </div>
