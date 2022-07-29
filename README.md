@@ -135,6 +135,18 @@ SELECT * FROM customers WHERE SALARY LIKE '2___3'; -- !ค้นหาข้อ�
 SELECT DISTINCT SALARY FROM customers ORDER BY SALARY; -- !ค่าซ้ำกันเช่น 2000 จะถูกนำเอาบรรทัดที่ซ้ำออกให้เหลือเพียงบรรทัดเดียว
 ``` 
 
+``` วิธีลง cypress
+1. cypresss บนเว็บไซต์ download now
+2. โลหด เสร็จแล้วแตกไฟล์เก็บไว้ซักที่บนเครื่อง
+3. เปิดไฟล์ แล้ว ดับเบิ้ลคลิกที่ Cypress Type Application
+4. open project เรา
+5. เลือก E2E test > continue > เลือก chrome > start E2E Testing
+6. ลง 
+- npm install --save-dev typescript
+- สร้างไฟล์ josn tsconfig.json ที่ floder cypress
+- npm i @types/testing-library__cypress
+```
+
 ```js ขั้นตอนการ upload image cypress
 1 npm install --save-dev cypress-file-upload 
 2 นำไฟล์ ภาพเก็บไว้ที่ folder fixtures
@@ -145,4 +157,18 @@ SELECT DISTINCT SALARY FROM customers ORDER BY SALARY; -- !ค่าซ้ำก
 
 ```
 
- 
+ ```การออก report หลังจาก test
+ 1. นำโค้ดด้านล่างไปเก็บที่ cypress.config.ts
+ "reporter": "mochawesome",
+  "reporterOptions": {
+     "reportDir": "cypress/reporters",
+     "overwrite": false,
+     "html": true,
+     "json": true
+  }
+  2. npm install mochawesome --save-dev
+  3. สร้าง folder reporters ไว้ใน folder cypress
+  4. npx cypress run // เป็นการ run ออก report ไฟล์ ที่เรา test ทั้งหมด
+  5. หรือ จะออก report แค่ไฟล์เดียว  npx cypress run --spec .\cypress\e2e\register.cy.ts // register.cy.ts คือไฟล์เดียวที่เราจะออก report
+
+ ```
